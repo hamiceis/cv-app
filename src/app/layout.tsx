@@ -1,11 +1,13 @@
 import '@/styles/globals.css'
 import { Roboto } from 'next/font/google';
 
-export const meta = {
-  title: 'CV-APP',
-  description: 'Application cv-online',
-}
+import { Metadata } from 'next';
  
+export const metadata: Metadata = {
+  title: 'CV_APP',
+  description: 'cv application',
+};
+
 const roboto = Roboto({
   weight: ['400', '700'],
   subsets: ['latin'],
