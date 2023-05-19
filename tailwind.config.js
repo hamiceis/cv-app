@@ -9,7 +9,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: 'Roboto, sans-serif',
-      }
+      },
+      screens: {
+        'xs': '320px',
+      },
     },
   },
   plugins: [],

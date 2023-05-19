@@ -123,7 +123,7 @@ export function Work() {
       onIncrement={handleSkill}
       onDecrement={removeLastSkill}
       >
-        <div className="grid grid-cols-3 gap-4 my-10">
+        <div className="grid xl:grid-cols-3 xs:grid-cols-1 sm:grid-cols-1  gap-4 my-10">
           {skill.map((habil: string, index: number) => (
             <div key={index} className="" >
             <Title title={habil} />
