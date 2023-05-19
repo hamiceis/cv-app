@@ -10,11 +10,7 @@ interface FileChangeEvent extends ChangeEvent<HTMLInputElement> {
   };
 }
 
-interface HeaderProps {
-  handle: () => void;
-}
-
-function Header({ handle }: HeaderProps) {
+function Header() {
   const [selectedFile, setSelectedFile] = useState<File | undefined>(undefined);
   const [preview, setPreview] = useState<string | undefined>(undefined);
 
@@ -49,10 +45,6 @@ function Header({ handle }: HeaderProps) {
   const opacityImage = !preview ? 'opacity-1' : 'opacity-0';
 
   return (
-    <>
-    <div>
-      <Menu  handlePrint={handle} />
-    </div>
     <header id="header" className="flex sm:flex-col xs:flex-col lg:flex-row items-center font-bold gap-6 md:gap-10">
       <div className="flex flex-shrink-0 flex-grow-0 flex-auto w-60 h-60 rounded-full relative overflow-hidden cursor-pointer border border-black group">
         <input
@@ -87,7 +79,6 @@ function Header({ handle }: HeaderProps) {
         <Title title="Front-end Developer" color="primary" />
       </div>
     </header>
-    </>
   );
 }
 
